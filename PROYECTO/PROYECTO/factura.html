@@ -1,0 +1,72 @@
+<!DOCTYPE Html>
+<head>
+<title>FORMULARIO CHECKED </title>
+<link rel="stylesheet" href="./css/formulario css.css">
+<!-- link de sitio SweetAlert -->
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+<body>
+<!-- Programa que permita comprar tipos de comidas rápidas con adicionales-->
+<center>
+<img src="https://st2.depositphotos.com/2172301/6856/v/450/depositphotos_68561517-stock-illustration-logo-of-information-technology.jpg" alt="" height="100" width="100">
+<h1>FACTURA DE VENTAS </h1>
+<form action="" method="">
+<!-- Sección cabecera de encabezado de factura -->
+<table><caption>FACTURA DE VENTA</caption>
+<tr><th>Nombre</th><td><input type="text" size="20" ></td><th>TIPO DOCUMENTO </th><th><select id="tp"><option>CC </option><option>CE</option><option>NIT</option></select></th><th>No.</th>
+<td><input type="text" size="25"></td></tr>
+<tr><th>DIRECCION </th><td><input type="text" id="dir" size="25"></td><th>TELEFONO </th><td><input type="text" id="tel" size="20"></td><th>EMPLEADO </th><td><input type="text" id="emp" size="25"></td></tr>
+<!-- Sección cabecera de detalle de factura -->
+<tr><th>REFERENCIA</th>
+    <th colspan="2">DESCRIPCION</th><th>CANTIDAD</th><th>VALOR UNITARIO</th><th>SUBTOTAL</th></tr>
+    <!-- 1ER ITEM  -->
+    <tr>
+        <th><select id="prod1" onchange="mostrar();">
+        <option>Seleccionar:</option>
+        <option value="1900000">computador mesa</option>
+        <option value="600000">computador gamer</option>
+        <option value="230000">computador portatil</option>
+        <option value="850000">celular samsung A25</option>
+        <option value="2000000">celular oppo 12 reno</option>
+        <option value="9500000">celular iphone 16 pro max</option>
+        <option value="45000">mouse inalambrico</option>
+        <option value="120000">cargador de iphone</option>
+        <option value="300000">audifonos inalambricos</option>
+        </select></th>
+    <th colspan="2"><input type="text" id="desc01" size="40"></th>
+    <th><input type="number" id="cant01" size="10"></th>
+    <th><input type="text" id="vau01" size="15" disabled></th>
+    <th><input type="text" id="vat01" size="15"disabled></th></tr>
+    <tr>
+  
+<!-- Sección liquidación de factura -->
+<tr></tr>
+<tr><th colspan="4">TOTAL ADICIONALES</th>
+<th colspan="2"><input type="number" id="adic0" disabled></th></tr>
+<tr><th colspan="2">FORMA DE PAGO</th>
+<th colspan="2"><input type="radio" name="fp" id="radio1">Efectivo <br>
+<input type="radio" name="fp" id="radio2">Nequi <br>
+<input type="radio" name="fp" id="radio3">TjCredito</th>
+<th>SUBTOTAL</th><td><input type="text" id="subt" size="25"></td></tr>
+<tr>
+<th colspan="4" rowspan="3">OBSERVACIONES: REVISE SU PEDIDO ENTREGADO Y GRACIAS POR ATENDERTE!!</th>
+<th>IVA</th><td><input type="text" id="iva" size="25"></td></tr>
+<tr><th>DESCUENTO</th><td><input type="text" id="desc" size="25"></td></tr>
+<tr><th>NETO</th><td><input type="text" id="neto" size="25"></td></tr>
+<tr><th colspan="2"><input type="button" value="CALCULAR PAGO" onclick="mostrar();"></th>
+<th colspan="2"><input type="reset" value="BORRAR"></th>
+<th colspan="2"><input type="button" value="ENVIAR" onclick="enviar();"></th></tr>
+<li>
+    <a class="boton-menu boton-volver" href="./index.html"> <!-- index pag_principal-->
+        <i class="bi bi-arrow-return-left"></i> volver a menu
+    </a>
+    <a class="boton-menu boton-carrito active" href=" "><!--—carrito.html-->
+
+        <i class="bi bi-cart-fill"></i> 
+</li>
+</table>  
+</form>
+</center>
+<script src="./JS/factura.js"></script>
+</body>
+</html>
